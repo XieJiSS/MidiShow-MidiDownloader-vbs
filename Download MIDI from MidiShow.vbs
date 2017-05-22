@@ -2,18 +2,18 @@
 
 test_connect
 
-'ÖÆ×÷£º½â¼¯SS
-'ÓÊÏä£ºc141028@protonmail.com
-'@TODO£º¸ù¾İ MidiShow±àºÅ/MidiShowÍøÖ·/MIDIÃû³Æ ÃâµÇÂ¼ÏÂÔØMidiShowÉÏµÄMIDI¡£
+'åˆ¶ä½œï¼šè§£é›†SS
+'é‚®ç®±ï¼šc141028@protonmail.com
+'@TODOï¼šæ ¹æ® MidiShowç¼–å·/MidiShowç½‘å€/MIDIåç§° å…ç™»å½•ä¸‹è½½MidiShowä¸Šçš„MIDIã€‚
 '@Param: 
-'ÈÕÆÚ£º2017/05/22
-'ÏµÍ³£ºWinXP¿ÉÓÃ£¬Win7+ºÍVistaÎ´²âÊÔ
-'×¢Òâ£º
-'	1. ÓÉÓÚ½Å±¾ÁªÍøGETÊı¾İ²¢½«Êı¾İĞ´Èë´ÅÅÌ£¬Ä³Ãâ·ÑÉ±¶¾Èí¼ş¿Ï¶¨»á±¨¶¾£¬
-'	   Òò´Ë²ÉÓÃ¿ªÔ´ĞÎÊ½(¶ø²»ÊÇÓÃ×¨ÃÅµÄÈí¼ş±àÒëÎªexe)¡£
-'	2. ÃâµÇÂ¼ÏÂÔØ»ùÓÚMidiShowµÄ·ÃÎÊÈ¨ÏŞÂ©¶´£¨¼¸ºõÈË¾¡½ÔÖª£©£¬Èç¹ûÂ©¶´±»ĞŞ¸´Ôò½Å±¾×÷·Ï¡£
-'	3. ±¾½Å±¾½ö¹©Ñ§Ï°¡¢½»Á÷Ê¹ÓÃ£¬ÏÂÔØºóÇëÓÚ24Ğ¡Ê±ÄÚÉ¾³ı¡£
-'   4. ±¾½Å±¾×ñÕÕMITĞ­Òé¿ª·ÅÔ´´úÂë£¬ÔÚ×ñÕÕMITĞ­ÒéµÄÔ¼ÊøÌõ¼şµÄÇ°ÌáÏÂ£¬ÔÊĞí×ÔÓÉ´«²¥ºÍĞŞ¸Ä£º
+'æ—¥æœŸï¼š2017/05/22
+'ç³»ç»Ÿï¼šWinXPå¯ç”¨ï¼ŒWin7+å’ŒVistaæœªæµ‹è¯•
+'æ³¨æ„ï¼š
+'	1. ç”±äºè„šæœ¬è”ç½‘GETæ•°æ®å¹¶å°†æ•°æ®å†™å…¥ç£ç›˜ï¼ŒæŸå…è´¹æ€æ¯’è½¯ä»¶è‚¯å®šä¼šæŠ¥æ¯’ï¼Œ
+'	   å› æ­¤é‡‡ç”¨å¼€æºå½¢å¼(è€Œä¸æ˜¯ç”¨ä¸“é—¨çš„è½¯ä»¶ç¼–è¯‘ä¸ºexe)ã€‚
+'	2. å…ç™»å½•ä¸‹è½½åŸºäºMidiShowçš„è®¿é—®æƒé™æ¼æ´ï¼ˆå‡ ä¹äººå°½çš†çŸ¥ï¼‰ï¼Œå¦‚æœæ¼æ´è¢«ä¿®å¤åˆ™è„šæœ¬ä½œåºŸã€‚
+'	3. æœ¬è„šæœ¬ä»…ä¾›å­¦ä¹ ã€äº¤æµä½¿ç”¨ï¼Œä¸‹è½½åè¯·äº24å°æ—¶å†…åˆ é™¤ã€‚
+'   4. æœ¬è„šæœ¬éµç…§MITåè®®å¼€æ”¾æºä»£ç ï¼Œåœ¨éµç…§MITåè®®çš„çº¦æŸæ¡ä»¶çš„å‰æä¸‹ï¼Œå…è®¸è‡ªç”±ä¼ æ’­å’Œä¿®æ”¹ï¼š
 '
 '	MIT License
 '
@@ -80,7 +80,7 @@ Function download(midid,ff)
 	ado.SaveToFile fn
 	ado.Close()
 	nId = oWindow.setTimeout(GetRef("on_timeout"), 2000, "VBScript")
-	MsgBox "Download Finished. Midi Saved to: " & fn, 32+4, "MidiShow MIDIÏÂÔØ½Å±¾ By ½â¼¯SS"
+	MsgBox "Download Finished. Midi Saved to: " & fn, 32+4, "MidiShow MIDIä¸‹è½½è„šæœ¬ By è§£é›†SS"
 	oWindow.clearTimeout nId
 End Function
 
@@ -94,7 +94,7 @@ Function name(path)
 	http.send()
 	nm = Split(Split(http.responseText,"title>")(1)," - MIDI")(0)
 	if nm = "MidiShow" Then
-		name = "´ËMidi²»´æÔÚ¡£"
+		name = "æ­¤Midiä¸å­˜åœ¨ã€‚"
 	Else
 		name = nm
 	End If
@@ -103,39 +103,39 @@ End Function
 Function Search(text)
     On Error Resume Next
 	Set http = CreateObject("Msxml2.ServerXMLHTTP")
-	http.open "GET","http://www.midishow.com/search/midi?title=" & text & "&search=ËÑË÷",False
+	http.open "GET","http://www.midishow.com/search/midi?title=" & text & "&search=æœç´¢",False
 	http.send
 	Dim hrt
 	hrt = http.responseText
-	If Err Then MsgBox Err.Description, vbCritical + VbMsgBoxSetForeground, "MidiShow MIDIÏÂÔØ½Å±¾ - Error ³ö´íÁË£¡"
+	If Err Then MsgBox Err.Description, vbCritical + VbMsgBoxSetForeground, "MidiShow MIDIä¸‹è½½è„šæœ¬ - Error å‡ºé”™äº†ï¼"
 	On Error Goto 0
-	If UBound(Split(hrt,"<span class=" & Chr(34) & "empty" & Chr(34) & ">Ã»ÓĞÕÒµ½Êı¾İ.</span>")) <> 0 Then
-		MsgBox "Ã»ÓĞËÑË÷µ½ÄúÊäÈëµÄMIDIÃû³Æ¡£", vbOkCancel + vbInformation, "MidiShow MIDIÏÂÔØ½Å±¾ By ½â¼¯SS"
+	If UBound(Split(hrt,"<span class=" & Chr(34) & "empty" & Chr(34) & ">æ²¡æœ‰æ‰¾åˆ°æ•°æ®.</span>")) <> 0 Then
+		MsgBox "æ²¡æœ‰æœç´¢åˆ°æ‚¨è¾“å…¥çš„MIDIåç§°ã€‚", vbOkCancel + vbInformation, "MidiShow MIDIä¸‹è½½è„šæœ¬ By è§£é›†SS"
 		WScript.Quit()
 	Else
 		Ahtml = Split(hrt,"<a target=" & Chr(34) & "ms_p" & Chr(34) & " href=")
 		If UBound(Ahtml) <> 0 Then
-			morew = vbCrlf & vbCrlf & "ÓÉÓÚ×÷Õß(½â¼¯SS)ÀÁµÃµ÷ÊÔ£¬ËùÒÔÖÁ¶àÖ»ÄÜÏÔÊ¾Ç° 20 Ìõ" & vbCrlf & "µÄËÑË÷½á¹û¡£"
+			morew = vbCrlf & vbCrlf & "ç”±äºä½œè€…(è§£é›†SS)æ‡’å¾—è°ƒè¯•ï¼Œæ‰€ä»¥è‡³å¤šåªèƒ½æ˜¾ç¤ºå‰ 20 æ¡" & vbCrlf & "çš„æœç´¢ç»“æœã€‚"
 			For i = 1 To UBound(Ahtml)
 				inner = Split(Ahtml(i),"</a></h3>" & vbCrlf & "	<div class=" & Chr(34) & "c" & Chr(34) & ">")
 				out = Split(Replace(inner(0),Chr(34),""),">")
-				all = Replace(Replace(Split(Split(Split(hrt,"<div class=" & Chr(34) & "summary" & Chr(34) &">")(1),"</div>")(0),"¹²")(1),"Ìõ.","")," ","")
+				all = Replace(Replace(Split(Split(Split(hrt,"<div class=" & Chr(34) & "summary" & Chr(34) &">")(1),"</div>")(0),"å…±")(1),"æ¡.","")," ","")
 				star = Replace(Mid(Split(inner(1),"small><button class=" & Chr(34) & "ranks star_")(1),1,2),Chr(34),"")
 				d = Split(inner(1),"<br />")(0)
-				If d = vbCrlf & "	" Then d = vbCrlf & "Õâ¸ö×÷ÕßÌ«ÀÁ£¬Ã»ÓĞÁôÏÂÈÎºÎÃèÊö¡ú_¡ú"
+				If d = vbCrlf & "	" Then d = vbCrlf & "è¿™ä¸ªä½œè€…å¤ªæ‡’ï¼Œæ²¡æœ‰ç•™ä¸‹ä»»ä½•æè¿°â†’_â†’"
 				d = "------------------" & vbCrlf & d & vbCrlf & vbCrlf & "------------------"
-				desc = Split(d & vbCrlf & vbCrlf & Split(Replace(Split(inner(1),"</button>&nbsp;&nbsp;-&nbsp;&nbsp;")(1),"&nbsp;&nbsp;-&nbsp;&nbsp;","  "),"</small>")(0),"±êÇ©£º")(0) & vbCrlf
-				If MsgBox("ÊÇ·ñÏÂÔØMIDI ¡®" & out(1) & "¡¯ ?" & vbCrlf & vbCrlf & "×÷ÕßÃèÊö£º" & vbCrlf & Replace(desc,":","£º") & "MIDIĞÇ¼¶£º " & star & "ĞÇ" & vbCrlf & vbCrlf & "µÚ " & i & " Ìõ£¬¹² " & all & " Ìõ¡£" & morew, 32+4,"MidiShow MIDIÎŞ»ı·ÖÏÂÔØ - Confirm") = 6 Then download "http://www.midishow.com" & out(0),out(1)
+				desc = Split(d & vbCrlf & vbCrlf & Split(Replace(Split(inner(1),"</button>&nbsp;&nbsp;-&nbsp;&nbsp;")(1),"&nbsp;&nbsp;-&nbsp;&nbsp;","  "),"</small>")(0),"æ ‡ç­¾ï¼š")(0) & vbCrlf
+				If MsgBox("æ˜¯å¦ä¸‹è½½MIDI â€˜" & out(1) & "â€™ ?" & vbCrlf & vbCrlf & "ä½œè€…æè¿°ï¼š" & vbCrlf & Replace(desc,":","ï¼š") & "MIDIæ˜Ÿçº§ï¼š " & star & "æ˜Ÿ" & vbCrlf & vbCrlf & "ç¬¬ " & i & " æ¡ï¼Œå…± " & all & " æ¡ã€‚" & morew, 32+4,"MidiShow MIDIæ— ç§¯åˆ†ä¸‹è½½ - Confirm") = 6 Then download "http://www.midishow.com" & out(0),out(1)
 			Next
 		Else
-			error = "Error at line 125: " & vbCrlf & "    »ñÈ¡µ½µÄËÑË÷½á¹ûHTML¼È²»ÄÜËµÃ÷¡°Ã»ÓĞËÑË÷µ½MIDI¡±£¬Ò²²»ÄÜËµÃ÷¡°ËÑË÷µ½ÁËMIDI¡±¡£"
-			If MsgBox(error & vbCrlf & "¿ÉÄÜµÄÔ­ÒòÓĞ£º" & vbCrlf & "    1¡¢MidiShowÍøÕ¾Éı¼¶»ò¸Ä°æ£¬µ¼ÖÂÇëÇóÊ§°Ü»òÎŞ·¨½âÎöÍøÒ³£»" & vbCrlf & "    2¡¢ÍøÂçÌ«²î£¬»òÁ¬½Ó³¬Ê±¡£" & vbCrlf & vbCrlf & "Èç¹û¿ÉÒÔ£¬Çë·¢ËÍ´Ë±¨¸æµ½ c141028@163.com ¡£" & vbCrlf & "µã»÷¡°È·¶¨¡±¼ü¸´ÖÆ±¨¸æ...(µ÷ÓÃTextBox×é¼ş£¬¿ÉÄÜÊ§°Ü¡£)", vbOkCancel + vbInformation, "MidiShow MIDIÏÂÔØ½Å±¾ By ½â¼¯SS - Bug Report") = 1 Then copy hrt, True, False
+			error = "Error at line 125: " & vbCrlf & "    è·å–åˆ°çš„æœç´¢ç»“æœHTMLæ—¢ä¸èƒ½è¯´æ˜â€œæ²¡æœ‰æœç´¢åˆ°MIDIâ€ï¼Œä¹Ÿä¸èƒ½è¯´æ˜â€œæœç´¢åˆ°äº†MIDIâ€ã€‚"
+			If MsgBox(error & vbCrlf & "å¯èƒ½çš„åŸå› æœ‰ï¼š" & vbCrlf & "    1ã€MidiShowç½‘ç«™å‡çº§æˆ–æ”¹ç‰ˆï¼Œå¯¼è‡´è¯·æ±‚å¤±è´¥æˆ–æ— æ³•è§£æç½‘é¡µï¼›" & vbCrlf & "    2ã€ç½‘ç»œå¤ªå·®ï¼Œæˆ–è¿æ¥è¶…æ—¶ã€‚" & vbCrlf & vbCrlf & "å¦‚æœå¯ä»¥ï¼Œè¯·å‘é€æ­¤æŠ¥å‘Šåˆ° c141028@protonmail.com ã€‚" & vbCrlf & "ç‚¹å‡»â€œç¡®å®šâ€é”®å¤åˆ¶æŠ¥å‘Š...(è°ƒç”¨TextBoxç»„ä»¶ï¼Œå¯èƒ½å¤±è´¥ã€‚)", vbOkCancel + vbInformation, "MidiShow MIDIä¸‹è½½è„šæœ¬ By è§£é›†SS - Bug Report") = 1 Then copy hrt, True, False
 		End If
 	End If
 End Function
 
 Dim input
-input = InputBox("ÊäÈë MidiShow MIDI±àºÅ »ò" & vbCrlf & "MidiShowÍøÖ· »ò" & vbCrlf & "MIDI Ãû³Æ£º" & vbCrlf & vbCrlf & "×÷ÕßÓÊÏä£ºc141028@protonmail.com" & vbCrlf & "»¶Ó­´óÉñÌá½¨Òé^_^","MidiShow MIDIÃâ»ı·ÖÏÂÔØ½Å±¾ By ½â¼¯SS")
+input = InputBox("è¾“å…¥ MidiShow MIDIç¼–å· æˆ–" & vbCrlf & "MidiShowç½‘å€ æˆ–" & vbCrlf & "MIDI åç§°ï¼š" & vbCrlf & vbCrlf & "ä½œè€…é‚®ç®±ï¼šc141028@protonmail.com" & vbCrlf & "æ¬¢è¿å¤§ç¥æå»ºè®®^_^","MidiShow MIDIå…ç§¯åˆ†ä¸‹è½½è„šæœ¬ By è§£é›†SS")
 If input <> "" Then download input, vbNullString
 
 Function copy(txt,mtl,alt)
@@ -155,5 +155,5 @@ End Function
 
 Function test_connect()
 	Dim wsobj : Set wsobj = CreateObject("WScript.Shell")
-	wsobj.run "cmd /c ping /n 2 www.midishow.com || (echo ÎŞ·¨Á¬½Óµ½www.midishow.com¡£ && echo Çë¼ì²éÄãµÄÍøÂçÁ¬½Ó¡£ && echo ¿ÉÄÜÊÇ±»Ç½ÁË¡£Ê¹ÓÃVPNÒÔ½â¾öÕâ¸öÎÊÌâ¡£) | msg * /time:0",0,False
+	wsobj.run "cmd /c ping /n 2 www.midishow.com || (echo æ— æ³•è¿æ¥åˆ°www.midishow.comã€‚ && echo è¯·æ£€æŸ¥ä½ çš„ç½‘ç»œè¿æ¥ã€‚ && echo å¯èƒ½æ˜¯è¢«å¢™äº†ã€‚ä½¿ç”¨VPNä»¥è§£å†³è¿™ä¸ªé—®é¢˜ã€‚) | msg * /time:0",0,False
 End Function
