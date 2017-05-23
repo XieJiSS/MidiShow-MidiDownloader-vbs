@@ -11,7 +11,7 @@ This function create two objects:
 + `Msxml2.ServerXMLHTTP`, to get binary data from MidiShow's server.
 + `Adodb.Stream`, to write datas in the same directory the `.vbs` file is stored with filename like `<name> - <id>.mid`.
 
-If param `midid` is an url(matches regexp `/[A-Za-z]+://www.midishow.com/midi/[^/s]+/`), this function will download the midi file; Otherwise, the function `Search` will be called.
+If param `midid` is an url(matches regexp `[A-Za-z]+://www.midishow.com/midi/[^/s]+`), this function will download the midi file; Otherwise, the function `Search` will be called.
 
 ##Sub `on_timeout`
 Hack. Send an `{Enter}` key to simulation a click on the button `确定/yes`, in order to let the script keep running.
